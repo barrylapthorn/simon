@@ -1,0 +1,8 @@
+<header class="py-2">
+    {{ with .Date }}
+    <div class="text-sm uppercase text-center py-0">
+        {{ .Format ( i18n "dateTimeFormat" ) }}
+    </div>
+    {{ end }}
+    <h1 class="text-4xl leading-tight text-center">{{- .Title -}}</h1>
+</header>

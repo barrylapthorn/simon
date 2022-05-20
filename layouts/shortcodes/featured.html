@@ -1,0 +1,7 @@
+<div class="pr-6 pb-6 md:float-left">
+{{ with $.Page.Params.featured }}
+<img src="{{- . -}}" class="btl-card rounded-lg" />
+{{ else }}
+<img src="/placeholders/tech{{ add 1 (mod now.Second 3) }}.jpg" class="btl-card rounded-lg" />
+{{ end }}
+</div>

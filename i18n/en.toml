@@ -1,0 +1,5 @@
+[dateTimeFormat]
+  other = "Jan 2, 2006 at 15:04"
+
+[dateFormat]
+  other = "Jan 2, 2006"

@@ -1,0 +1,4 @@
+{{ $src := .Get 0 }}
+{{ $bits := split $src "." }}
+{{ $alt := first 1 $bits }}
+<img src="{{- $src -}}" alt="{{- $alt -}}" class="thumbnail" />

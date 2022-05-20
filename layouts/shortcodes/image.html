@@ -1,0 +1,3 @@
+{{ $src := .Get 0 }}
+{{ $alt := first 1 split $src "." }}
+<img src="{{- $src -}}" alt="{{- $alt -}}" class="image-fill">

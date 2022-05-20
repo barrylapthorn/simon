@@ -1,0 +1,11 @@
+{{/* unless we declare actual HTML in here, we 'decay' to the baseof.html definition */}}
+{{ define "main" }}
+
+{{- .Content -}}
+
+<ul class="pt-4">
+  {{ range ( where .Site.RegularPages "Type" "posts" ) }}
+  {{ partial "components/page-list-item-with-date.html" . }}
+  {{ end }}
+</ul>
+{{ end }}

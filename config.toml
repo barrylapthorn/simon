@@ -1,0 +1,112 @@
+baseurl = "https://example.com"
+title = "EXAMPLE SITE"
+
+#theme = "hugo-theme-earth"
+
+languagecode = "en"
+defaultcontentlanguage = "en"
+
+paginate = 20
+canonifyurls = true
+relativeURLs = true
+
+pygmentsstyle = "b2"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+ignoreErrors = ["error-remote-getjson"]
+
+# [markup.goldmark]
+# [markup.goldmark.renderer]
+# #  We have lots of inline HTML so need to render it.
+# #  TODO:  replace with shortcodes.
+# unsafe = true
+
+# We need this to purge some of tailwind's css correctly, see:
+# https://gohugo.io/hugo-pipes/postprocess/#css-purging-with-postcss
+[build]
+  writeStats = true
+
+[Permalinks]
+  posts = "/blog/:year/:month/:day/:title"
+  error = "/:title"
+
+[params]
+    author = ""
+    description = "some witty tag line"
+    keywords = "blog,developer,personal"
+    info = "C++, and other stuff"
+    # avatarurl = "images/avatar.jpg"
+    footercontent = "(c) my site.com"
+
+    dateformat = "January 2, 2006"
+
+    hideCredits = true
+    hideCopyright = true
+
+    favicon_32 = "/favicon.ico"
+
+    # Git Commit in Footer, uncomment the line below to enable it.
+    #commit = "https://github.com/luizdepra/hugo-coder/tree/"
+
+    rtl = false
+
+    # Specify light/dark colorscheme
+    # Supported values:
+    # "auto" (use preference set by browser)
+    # "dark" (dark background, light foreground)
+    # "light" (light background, dark foreground) (default)
+    colorscheme = "light"
+
+    # Series see also post count
+    maxSeeAlsoItems = 5
+
+    # Custom CSS
+    custom_css = ["/css/scroll.css", "css/site.css"]
+
+    # Custom JS
+    custom_js = ["/scripts/scroll.js"]
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+
+[[params.social]]
+    name = "Github"
+    icon = "svg/github.svg"
+    weight = 1
+    url = "https://github.com/yourusername/"
+
+[[params.social]]
+    name = "Twitter"
+    icon = "svg/twitter.svg"
+    weight = 3
+    url = "https://twitter.com/yourtwitterhandle/"
+
+
+[languages]
+    [languages.en]
+        languagename = "English"
+
+        [languages.en.menu]
+
+            [[languages.en.menu.main]]
+            name = "Notes"
+            weight = 25
+            url = "notes/"
+
+            [[languages.en.menu.main]]
+            name = "Posts"
+            weight = 10
+            url = "posts/"
+
+            [[languages.en.menu.main]]
+            name = "Projects"
+            weight = 20
+            url = "projects/"
+
+            [[languages.en.menu.main]]
+            name = "About"
+            weight = 40
+            url = "about/"

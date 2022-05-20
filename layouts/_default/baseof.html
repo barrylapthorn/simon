@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html {{ with .Site.LanguageCode }} lang="{{ . }}" {{ end }}>
+  {{- partial "head/head.html" . -}}
+  <body>
+    {{- partial "header.html" . -}}
+    <main class="mt-0 m-auto max-w-3xl">
+      {{- block "main" . -}}{{- end -}}
+    </main>
+    {{- partial "footer.html" . -}}
+  </body>
+  {{- partial "scripts.html" -}}
+</html>

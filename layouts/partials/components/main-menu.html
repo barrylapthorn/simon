@@ -1,0 +1,34 @@
+{{/* looks for a menu specifically called 'main' in config.toml */}}
+
+<!-- <div class=""> -->
+    <ul class="text-sm absolute bottom-0 right-0 ">
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.main }}
+        {{ if .HasChildren }}
+        <li class="pr-2 inline {{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}">
+            <a href="#">
+                {{ .Pre }}
+                <span>{{ .Name }}</span>
+            </a>
+        </li>
+        <ul class="sub-menu inline">
+            {{ range .Children }}
+            <li class="inline {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                <a href="/{{ .URL }}">
+                    {{ .Pre }}
+                    <span>{{ .Name }}</span>
+                </a>
+            </li>
+            {{ end }}
+        </ul>
+        {{ else }}
+        <li class="inline-block px-2">
+            <a href="/{{ .URL }}">
+                {{ .Pre }}
+                <span class="uppercase">{{ .Name }}</span>
+            </a>
+        </li>
+        {{ end }}
+        {{ end }}
+    </ul>
+<!-- </div> -->

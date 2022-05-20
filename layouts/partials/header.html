@@ -1,0 +1,21 @@
+<!-- need a background colour here otherwise we're transparent and
+  we have a high Z, i.e. the top most element -->
+<nav class="sticky top-0 z-40 pb-2 dark:bg-black bg-white max-w-3xl m-auto text-left">
+  <!-- <div class="text-center py-2 font-semibold text-3xl tracking-tight"> -->
+    <span
+      class="border-gray-900 dark:border-gray-400 border-b-2 pb-2 font-mono uppercase"
+    >
+      <a href="/" alt="{{ .Site.Title }}" name="{{ .Site.Title }}"
+        >{{ .Site.Title }}</a
+      >
+      {{ partial "components/main-menu.html" . }}
+    </span>
+  <!-- </div> -->
+  <!-- <div> -->
+    <!-- <div class="text-center py-2"> -->
+      <!-- {{ partial "components/main-menu.html" . }} -->
+    <!-- </div> -->
+    <!-- <div class="text-center py-2">{{ partial "components/social.html" . }}</div> -->
+  <!-- </div> -->
+</nav>
+

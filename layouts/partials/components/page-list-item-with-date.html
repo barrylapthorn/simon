@@ -1,0 +1,8 @@
+<li class="mb-4">
+  <a href="{{.Permalink}}" class="hover:underline">{{- .Title -}}
+{{ with .Date }}<span class="font-light ">, {{ .Format "January 2, 2006" }}</span>{{ end }}
+  </a>
+  <ul>
+    <li>{{ .Summary }}</li>
+  </ul>
+</li>

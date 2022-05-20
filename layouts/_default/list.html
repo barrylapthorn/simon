@@ -1,0 +1,13 @@
+{{ define "main" }}
+<!-- e.g. Posts, Projects, etc. -->
+<h1 class="text-left pb-4">{{.Page.Title}}</h1>
+
+<!-- Any content from page, i.e. Posts/index.md (or whatever) -->
+<div>{{- .Content -}}</div>
+
+<ul>
+  {{ range .Pages }}
+    {{ partial "components/page-list-item-with-date.html" . }}
+  {{ end }}
+</ul>
+{{ end }}

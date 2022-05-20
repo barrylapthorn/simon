@@ -1,0 +1,11 @@
+<div>
+    <button class="colour-mode__btn hidden dark:block focus:outline-none">
+        <span>{{ partial "svg/sun.svg" . }}</span>
+    </button>
+    <button class="colour-mode__btn dark:hidden focus:outline-none">
+        <span>{{ partial "svg/moon.svg" . }}</span>
+    </button>
+    <!-- need to add this to ensure hugo captures these classes in hugo_stats.json -->
+    <!-- when we run purgecss -->
+    <span class="light"></span><span class="dark"></span>
+</div>
