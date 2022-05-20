@@ -10,10 +10,6 @@ resources/_gen
 # Ignore node modules
 node_modules/
 
-# Ignore files from theme that we copy to here
-package.json
-package-lock.json
-
 # Hugo stats for css purging
 hugo_stats.json
 
